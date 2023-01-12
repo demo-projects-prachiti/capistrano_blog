@@ -24,7 +24,15 @@ gem 'jbuilder', '~> 2.7'
 gem 'net-ssh', '>= 6.0.2'
 gem 'ed25519', '>= 1.2', '< 2.0'
 gem 'bcrypt_pbkdf', '>= 1.0', '< 2.0'
-gem 'date'
+# gem 'date'
+gem 'capistrano', '~> 3.11' 
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
+gem "capistrano-rvm"
+gem 'rvm-capistrano'
+gem 'rvm1-capistrano3', require: false
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
@@ -45,11 +53,6 @@ group :development do
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
-  gem "capistrano", "~> 3.10", require: false
-  gem "capistrano-rails", "~> 1.6", require: false
-  gem 'capistrano-bundler'
-  gem 'capistrano-rvm'
-  gem 'capistrano-yarn'
 end
 
 group :test do

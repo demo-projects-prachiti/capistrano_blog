@@ -8,7 +8,7 @@ set :repo_url, "git@github.com:demo-projects-prachiti/capistrano_blog.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 ask :branch, :master
 set :bundle_without,  [:development, :test]
-set :stages, %w(staging production)
+set :stages,  :production
 # set :bundle_cmd "/var/www/capistrano_blog/releases/20230112064246 && ( RAILS_ENV=production ~/.rvm/bin/rvm ruby-2.7.2-p137 bundle exec rake assets:precompile) "
 # set :bundle_cmd, "/home/neosoft/.rvm/gems/ruby-2.7.2"
 
