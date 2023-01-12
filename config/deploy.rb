@@ -10,14 +10,15 @@ ask :branch, :master
 set :bundle_without,  [:development, :test]
 set :stages, %w(staging production)
 # set :bundle_cmd "/var/www/capistrano_blog/releases/20230112064246 && ( RAILS_ENV=production ~/.rvm/bin/rvm ruby-2.7.2-p137 bundle exec rake assets:precompile) "
-set :bundle_cmd, "/home/neosoft/.rvm/gems/ruby-2.7.2"
+# set :bundle_cmd, "/home/neosoft/.rvm/gems/ruby-2.7.2"
+
 set :use_sudo, false
 set :rvm_ruby_version, 'ruby-2.7.2'
 set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 SSHKit.config.command_map[:rake] = "#{fetch(:default_env)[:rvm_bin_path]}/rvm ruby-#{fetch(:rvm_ruby_version)} do bundle exec rake"
 
 # Default deploy_to directory is /var/www/my_app_name
-# set :deploy_to, "/var/www/my_app_name"
+set :deploy_to, "/home/neosoft/cap"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
