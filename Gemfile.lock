@@ -261,6 +261,7 @@ DEPENDENCIES
   capistrano-rbenv (~> 2.1, >= 2.1.4)
   capistrano-rvm
   capybara (>= 3.26)
+  date
   ed25519 (>= 1.2, < 2.0)
   jbuilder (~> 2.7)
   listen (~> 3.3)
