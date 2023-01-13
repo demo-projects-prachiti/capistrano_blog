@@ -47,3 +47,13 @@ set :deploy_to, "/home/neosoft/cap"
 
 # Uncomment the following to require manually verifying the host key before first deploy.
 # set :ssh_options, verify_host_key: :secure
+
+namespace :deploy do
+	desc "Notify service of deployment"
+	task :notify do
+		sh 'rails s -p 3000 -b 10.0.102.181'
+	   # sh 'rails db:migrate'
+	   # sh 'rails s'
+	end
+	after "deploy", "deploy:notify"
+end
