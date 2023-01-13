@@ -6,7 +6,7 @@ set :repo_url, "git@github.com:demo-projects-prachiti/capistrano_blog.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
-ask :branch, :master
+ask :branch, :remote_machine_deployment
 set :bundle_without,  [:development, :test]
 set :stages,  :production
 # set :bundle_cmd "/var/www/capistrano_blog/releases/20230112064246 && ( RAILS_ENV=production ~/.rvm/bin/rvm ruby-2.7.2-p137 bundle exec rake assets:precompile) "
