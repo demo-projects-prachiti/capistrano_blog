@@ -7,7 +7,7 @@ set :repo_url, "git@github.com:demo-projects-prachiti/capistrano_blog.git"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 ask :branch, :remote_machine_deployment
-set :bundle_without,  [:development, :test]
+# set :bundle_without,  [:development, :test]
 set :stages,  :production
 # set :bundle_cmd "/var/www/capistrano_blog/releases/20230112064246 && ( RAILS_ENV=production ~/.rvm/bin/rvm ruby-2.7.2-p137 bundle exec rake assets:precompile) "
 # set :bundle_cmd, "/home/neosoft/.rvm/gems/ruby-2.7.2"
@@ -18,7 +18,7 @@ set :default_env, { rvm_bin_path: '~/.rvm/bin' }
 SSHKit.config.command_map[:rake] = "#{fetch(:default_env)[:rvm_bin_path]}/rvm ruby-#{fetch(:rvm_ruby_version)} do bundle exec rake"
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/neosoft/cap"
+set :deploy_to, "/home/neosoft/cap1"
 
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
