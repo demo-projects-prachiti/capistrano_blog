@@ -2,7 +2,6 @@
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
-*changes to see git fetch
 
 Things you may want to cover:
 
