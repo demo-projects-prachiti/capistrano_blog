@@ -31,6 +31,7 @@ gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'
 gem "capistrano-rvm"
 gem 'rvm-capistrano'
 gem 'rvm1-capistrano3', require: false
+gem 'rails-observers'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
