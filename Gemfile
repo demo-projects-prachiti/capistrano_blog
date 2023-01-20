@@ -32,6 +32,7 @@ gem "capistrano-rvm"
 gem 'rvm-capistrano'
 gem 'rvm1-capistrano3', require: false
 gem 'rails-observers'
+gem 'actionpack-action_caching'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

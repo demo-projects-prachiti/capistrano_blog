@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show edit update destroy ]
+  caches_action :index #expires_in: 1.minute
+  cache_sweeper :post_sweeper#, only: [ :edit, :destroy ]
 
   # GET /posts or /posts.json
   def index
@@ -21,8 +23,7 @@ class PostsController < ApplicationController
 
   # POST /posts or /posts.json
   def create
-    @post = Post.build(post_params)
-    @post.errors
+    @post = Post.new(post_params)
 
     respond_to do |format|
       if @post.save
